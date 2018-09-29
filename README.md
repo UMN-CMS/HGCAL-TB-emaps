@@ -11,7 +11,6 @@ The tool is based on the basic emaps for the different PCB versions. These text 
 The JSON configuration file for the module layout is based on the following unit representing a single module:
 
 ```json
-
 [  
   { 
     "ID": 01,
@@ -22,7 +21,8 @@ The JSON configuration file for the module layout is based on the following unit
     "angle": -120,
     "module_IX": 0,
     "module_IV": 0,
-    }
+    },
+    ...
 ]
 ```
 
@@ -32,14 +32,26 @@ Additional modules can be just added as separated by commas.
 
 ## Usage
 
+### Testing
+The script `test_emap.py` allows to plot the cells corresponding to the basic v2 and v3 PCB emaps:
+```bash
+python test_emap.py
+```
+
+![Basic emaps 2d](basemaps/basic_emaps_comparison.png)
+
+
+### Displaying
+
+The scripts `display_emap_2d/3d.py` allow to plot the cells corresponding to the emap in 2D or 3D:
+```bash
+python display_emap_2d/3d.py path/to/file.json
+```
+
+### EMAP writer
 The main script is `write_emap.py` and can be executed as: 
 ```bash
 python write_emap.py json_emap.json 
-```
-
-The scrip `test_emap.py` allows to plot the cells corresponding to the emap:
-```bash
-python test_emap.py
 ```
 
 ## Requirements
