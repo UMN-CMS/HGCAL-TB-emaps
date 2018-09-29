@@ -31,16 +31,16 @@ if __name__ == "__main__":
     #bad_chans += [(3,44), (3,60)] # Cells different in v2 and v3 PCBs
 
     fig = plt.figure(figsize = (8,4))
-    ax = fig.add_subplot(111)
+    ax = fig.add_subplot(111, projection='3d')
 
     for m in modules:
         print '## Plotting', m
         m.mark_bad_chans(bad_chans)
 
         x,y = m.get_chan_xy(angle = 30)
-        ax.scatter(x,y, c = m.channels.CHIP, cmap = cmap, s = m_size, marker = m_style)
+        ax.scatter(x,m.channels.layer ,y, c = m.channels.CHIP, cmap = cmap, s = m_size, marker = m_style)
         sel = m.channels.bad == True
-        ax.plot(x[sel], y[sel], 'r' + m_style, markersize = m_size/10)
+        ax.plot(x[sel],m.channels.layer[sel], y[sel], 'r' + m_style, markersize = m_size/10)
 
     plt.grid()
     plt.show()
