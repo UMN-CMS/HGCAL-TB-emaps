@@ -30,7 +30,7 @@ if __name__ == "__main__":
     bad_chans = [(2,20),(2,22),(2,12),(2,8),(2,10)] # HDMI side
     #bad_chans += [(3,44), (3,60)] # Cells different in v2 and v3 PCBs
 
-    fig = plt.figure(figsize = (8,4))
+    fig = plt.figure(figsize = (8,6))
     ax = fig.add_subplot(111, projection='3d')
 
     for m in modules:

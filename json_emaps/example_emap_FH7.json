@@ -1,0 +1,79 @@
+[
+    {
+        "ID": 01,
+        "layer": 1,
+        "subdet": "FH",
+        "pcb_version": "v3",
+        "facing": "front",
+        "angle": -180,
+        "module_IX": 0,
+        "module_IV": 0,
+    },
+
+    {
+        "ID": 02,
+        "layer": 1,
+        "subdet": "FH",
+        "pcb_version": "v3",
+        "facing": "front",
+        "angle": 0,
+        "module_IX": 1,
+        "module_IV": 0,
+    },
+
+
+    {
+        "ID": 03,
+        "layer": 1,
+        "subdet": "FH",
+        "pcb_version": "v3",
+        "facing": "front",
+        "angle": 180,
+        "module_IX": 1,
+        "module_IV": -1,
+    },
+
+    {
+        "ID": 04,
+        "layer": 1,
+        "subdet": "FH",
+        "pcb_version": "v3",
+        "facing": "front",
+        "angle": -180,
+        "module_IX": 0,
+        "module_IV": -1,
+    },
+
+    {
+        "ID": 05,
+        "layer": 1,
+        "subdet": "FH",
+        "pcb_version": "v3",
+        "facing": "front",
+        "angle": -180,
+        "module_IX": -1,
+        "module_IV": 0,
+    },
+
+    {
+        "ID": 06,
+        "layer": 1,
+        "subdet": "FH",
+        "pcb_version": "v3",
+        "facing": "front",
+        "angle": 0,
+        "module_IX": -1,
+        "module_IV": 1,
+    },
+
+    {
+        "ID": 07,
+        "layer": 1,
+        "subdet": "FH",
+        "pcb_version": "v3",
+        "facing": "front",
+        "angle": 0,
+        "module_IX": 0,
+        "module_IV": 1,
+    }
+]
