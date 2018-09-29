@@ -1,11 +1,8 @@
 #!/usr/local/bin/python
-
 from emap_tools import *
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-mpl.rcParams['image.cmap'] = 'hot_r'
-from matplotlib.colors import LogNorm
 
 plt.figure(figsize = (12,4))
 
@@ -15,10 +12,8 @@ m_size = 300
 
 glob_angle = -30
 
-#bad_chans = zip(range(1,5) , [20]*4) + [(3,42),(3,44),(3,46)]
-#bad_chans = [(2,20),(3,42),(3,60)]
 bad_chans = [(2,20),(2,22),(2,12),(2,8),(2,10)] # HDMI side
-bad_chans += [(3,44), (3,60)]
+bad_chans += [(3,44), (3,60)] # Cells different in v2 and v3 PCBs 
 
 plt.subplot(121)
 
