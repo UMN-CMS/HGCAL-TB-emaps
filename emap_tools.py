@@ -130,8 +130,8 @@ class Module():
 
     def get_chan_xy(self, angle = 0):
 
-        x = self.channels.apply(lambda row: get_x_from_uv(row.IX, row.IV), axis = 1) #+ self.module_X
-        y = self.channels.apply(lambda row: get_y_from_uv(row.IX, row.IV), axis = 1) #+ self.module_Y
+        x = self.channels.apply(lambda row: get_x_from_uv(row.IX, row.IV), axis = 1) + self.module_X
+        y = self.channels.apply(lambda row: get_y_from_uv(row.IX, row.IV), axis = 1) + self.module_Y
 
         if angle != 0:
             theta = np.radians(angle)
@@ -140,7 +140,7 @@ class Module():
             x,y = zip(*np.dot(zip(x,y),R))
             x,y = np.array(x),np.array(y)
 
-        x+= + self.module_X
-        y+= + self.module_Y
+        #x+= + self.module_X
+        #y+= + self.module_Y
 
         return x,y

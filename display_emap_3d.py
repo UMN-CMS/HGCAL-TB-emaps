@@ -24,7 +24,7 @@ if __name__ == "__main__":
     m_size = 100
 
     ## Global rotation required to have the same x/y as in the CMSSW version
-    glob_angle = -30
+    glob_angle = 30
 
     ## Use bad channels flag to mark special channels
     bad_chans = [(2,20),(2,22),(2,12),(2,8),(2,10)] # HDMI side
@@ -37,8 +37,9 @@ if __name__ == "__main__":
         print '## Plotting', m
         m.mark_bad_chans(bad_chans)
 
-        x,y = m.get_chan_xy(angle = 30)
-        ax.scatter(x,m.channels.layer ,y, c = m.channels.CHIP, cmap = cmap, s = m_size, marker = m_style)
+        x,y = m.get_chan_xy(angle = glob_angle)
+        sel = m.channels.bad == False
+        ax.scatter(x[sel],m.channels.layer[sel] ,y[sel], c = m.channels.CHIP[sel], cmap = cmap, s = m_size, marker = m_style)
         sel = m.channels.bad == True
         ax.plot(x[sel],m.channels.layer[sel], y[sel], 'r' + m_style, markersize = m_size/10)
 
