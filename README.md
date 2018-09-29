@@ -21,8 +21,7 @@ The JSON configuration file for the module layout is based on the following unit
     "angle": -120,
     "module_IX": 0,
     "module_IV": 0,
-    },
-    ...
+    }
 ]
 ```
 
@@ -40,6 +39,8 @@ python test_emap.py
 
 ![Basic emaps 2d](basemaps/basic_emaps_comparison.png)
 
+*Note*: colors correspond to chip numbers, the red cells indicate channels under the HDMI connector and some of those different in v2 and v3
+
 
 ### Displaying
 
@@ -47,6 +48,11 @@ The scripts `display_emap_2d/3d.py` allow to plot the cells corresponding to the
 ```bash
 python display_emap_2d/3d.py path/to/file.json
 ```
+
+3D display example for 1 FH layer:
+(*Note*: the red cells indicate channels under the HDMI connector)
+
+![3D display example for 1 FH layer](basemaps/example_3D_display_FH_1layer.png)
 
 ### EMAP writer
 The main script is `write_emap.py` and can be executed as: 
