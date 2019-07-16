@@ -1,0 +1,20 @@
+[  
+    { 
+        "ID": 01,
+        "layer": 1,
+        "pcb_version": "v3",
+        "facing": "front",
+        "angle": 0,
+        "module_IX": 0,
+        "module_IV": 0,
+    },
+    { 
+        "ID": 02,
+        "layer": 2,
+        "pcb_version": "v3",
+        "facing": "front",
+        "angle": 0,
+        "module_IX": 0,
+        "module_IV": 0,
+    }
+]
